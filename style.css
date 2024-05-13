@@ -1,0 +1,29 @@
+/* Estilos para a barra de navegação */
+.navbar {
+    border-bottom: 2px solid #ccc; /* Adiciona uma borda na parte inferior */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Tamanho da fonte do nome da loja */
+}
+
+/* Estilos para a barra de pesquisa de produtos */
+.form-control {
+    width: 300px; /* Largura da barra de pesquisa */
+}
+
+/* Estilos para o carrossel de apresentação */
+.carousel {
+    margin-top: 20px; /* Espaço entre a barra de navegação e o carrossel */
+}
+
+/* Estilos para os links de navegação */
+.nav-link {
+    font-weight: bold; /* Deixa os links de navegação em negrito */
+}
+
+/* Estilos para o conteúdo da página */
+.container {
+    margin-top: 20px; /* Espaço entre o carrossel e o conteúdo */
+}
+
