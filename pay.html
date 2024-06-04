@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <!-- Adicione o Bootstrap CSS -->
+    <link href="bootstrap-4.6.2-dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/image-removebg-preview.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            </a>
+
+            <!-- Barra de pesquisa de produtos -->
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar " aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+
+            <!-- Links de navegação -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Carrinho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home_page.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<div class="container my-5">
+    <h2 class="mb-4">Dados de Pagamento</h2>
+    <form id="paymentForm" novalidate>
+        <div class="mb-3">
+            <label for="cardName" class="form-label">Nome no Cartão</label>
+            <input type="text" class="form-control" id="cardName" name="cardName" placeholder="Nome conforme exibido no cartão" required>
+            <div class="invalid-feedback">
+                Por favor, insira o nome conforme exibido no cartão.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="cardNumber" class="form-label">Número do Cartão</label>
+            <input type="text" class="form-control" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000" pattern="\d{4} \d{4} \d{4} \d{4}" required>
+            <div class="invalid-feedback">
+                Por favor, insira um número de cartão válido.
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="expiryMonth" class="form-label">Mês de Expiração</label>
+                <select class="form-select" id="expiryMonth" name="expiryMonth" required>
+                    <option selected disabled>Escolher...</option>
+                    <option value="01">01 - Janeiro</option>
+                    <option value="02">02 - Fevereiro</option>
+                    <option value="03">01 - Janeiro</option>
+                    <option value="04">02 - Fevereiro</option>
+                    <option value="05">01 - Janeiro</option>
+                    <option value="06">02 - Fevereiro</option>
+                    <option value="07">01 - Janeiro</option>
+                    <option value="08">02 - Fevereiro</option>
+                    <option value="09">01 - Janeiro</option>
+                    <option value="10">02 - Fevereiro</option>
+                    <option value="11">01 - Janeiro</option>
+                    <option value="12">02 - Fevereiro</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor, selecione o mês de expiração.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="expiryYear" class="form-label">Ano de Expiração</label>
+                <select class="form-select" id="expiryYear" name="expiryYear" required>
+                    <option selected disabled>Escolher...</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2025</option>
+                    <option value="2024">2026</option>
+                    <option value="2023">2027</option>
+                    <option value="2024">2028</option>
+                    <option value="2023">2029</option>
+                    <option value="2024">2030</option>
+                    <!-- Adicione mais anos conforme necessário -->
+                </select>
+                <div class="invalid-feedback">
+                    Por favor, selecione o ano de expiração.
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="cvv" class="form-label">Código CVV</label>
+            <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123" pattern="\d{3}" required>
+            <div class="invalid-feedback">
+                Por favor, insira o código CVV.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirmar Pagamento</button>
+        <div id="paymentSuccess" class="mt-3 d-none">
+            <div class="alert alert-success" role="alert">
+                Pagamento processado com sucesso!
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<footer class="footer bg-dark text-light py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Sobre Nós</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Siga-nos</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Adicione o jQuery -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<!-- Adicione o Bootstrap JS -->
+<script src="bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
